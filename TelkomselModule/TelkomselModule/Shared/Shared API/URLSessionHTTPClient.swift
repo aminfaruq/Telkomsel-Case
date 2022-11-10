@@ -43,6 +43,8 @@ public final class URLSessionHTTPClient : HTTPClient {
     
     public func post(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "POST"
         let task = session.dataTask(with: request) {  data, response, error in
             completion(Result {
