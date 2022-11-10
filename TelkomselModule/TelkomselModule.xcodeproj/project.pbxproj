@@ -41,7 +41,6 @@
 		837C24DD291D462B008F5EA6 /* FeedLocalizationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24DB291D462B008F5EA6 /* FeedLocalizationTest.swift */; };
 		837C24DF291D4654008F5EA6 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24DE291D4654008F5EA6 /* FeedImagePresenterTests.swift */; };
 		837C24ED291D482B008F5EA6 /* TelkomseliOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C24E5291D482B008F5EA6 /* TelkomseliOS.framework */; };
-		837C24F2291D482B008F5EA6 /* TelkomseliOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */; };
 		837C24F3291D482B008F5EA6 /* TelkomseliOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 837C24E7291D482B008F5EA6 /* TelkomseliOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		837C2500291D4916008F5EA6 /* TelkomselModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; platformFilter = ios; };
 		837C2501291D4916008F5EA6 /* TelkomselModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -151,7 +150,6 @@
 		837C24E5291D482B008F5EA6 /* TelkomseliOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TelkomseliOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C24E7291D482B008F5EA6 /* TelkomseliOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelkomseliOS.h; sourceTree = "<group>"; };
 		837C24EC291D482B008F5EA6 /* TelkomseliOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelkomseliOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelkomseliOSTests.swift; sourceTree = "<group>"; };
 		837C2507291D4990008F5EA6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		837C2508291D4990008F5EA6 /* CellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		837C250B291D4990008F5EA6 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
@@ -425,10 +423,9 @@
 		837C24F0291D482B008F5EA6 /* TelkomseliOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				837C251A291D4A71008F5EA6 /* Helpers */,
 				837C2538291D4F9E008F5EA6 /* Feed UI */,
 				837C2521291D4A86008F5EA6 /* Shared UI */,
-				837C251A291D4A71008F5EA6 /* Helpers */,
-				837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */,
 			);
 			path = TelkomseliOSTests;
 			sourceTree = "<group>";
@@ -819,7 +816,6 @@
 			files = (
 				837C2523291D4A9A008F5EA6 /* ListSnapshotTest.swift in Sources */,
 				837C251E291D4A71008F5EA6 /* XCTestCase+Snapshot.swift in Sources */,
-				837C24F2291D482B008F5EA6 /* TelkomseliOSTests.swift in Sources */,
 				837C2520291D4A71008F5EA6 /* UIViewController+Snapshot.swift in Sources */,
 				837C251F291D4A71008F5EA6 /* UIImage+TestHelpers.swift in Sources */,
 				837C253A291D4FB3008F5EA6 /* FeedSnapshotTest.swift in Sources */,
