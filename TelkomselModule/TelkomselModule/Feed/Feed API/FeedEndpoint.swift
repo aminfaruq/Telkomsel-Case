@@ -13,7 +13,7 @@ public enum FeedEndpoint {
     public func url(baseURL: URL) -> URL {
         switch self {
         case .post:
-            return baseURL.appendingPathComponent("products")
+            return baseURL.appendingPathComponent("/telkom/v2/products")
         }
     }
  }

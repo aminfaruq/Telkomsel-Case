@@ -1,6 +1,6 @@
 //
 //  FeedItemsMapperTest.swift
-//  EssentialFeedTests
+//  TelkomselModuleTests
 //
 //  Created by Amin faruq on 06/10/22.
 //
