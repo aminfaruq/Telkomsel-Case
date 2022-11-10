@@ -8,7 +8,6 @@
 import UIKit
 import TelkomselModule
 
-
 public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
     
     private(set) public var errorView = ErrorView()
