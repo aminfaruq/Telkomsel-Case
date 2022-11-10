@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		837C2477291CFEB9008F5EA6 /* TelkomselModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; };
-		837C247C291CFEB9008F5EA6 /* TelkomselModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */; };
 		837C247D291CFEB9008F5EA6 /* TelkomselModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 837C2471291CFEB9008F5EA6 /* TelkomselModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		837C248B291CFF50008F5EA6 /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = 837C248D291CFF50008F5EA6 /* Shared.strings */; };
 		837C2494291CFF7B008F5EA6 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C248F291CFF7A008F5EA6 /* ResourceLoadingView.swift */; };
@@ -49,7 +48,6 @@
 		837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TelkomselModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C2471291CFEB9008F5EA6 /* TelkomselModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelkomselModule.h; sourceTree = "<group>"; };
 		837C2476291CFEB9008F5EA6 /* TelkomselModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelkomselModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelkomselModuleTests.swift; sourceTree = "<group>"; };
 		837C248C291CFF50008F5EA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Shared.strings; sourceTree = "<group>"; };
 		837C248E291CFF66008F5EA6 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Shared.strings; sourceTree = "<group>"; };
 		837C248F291CFF7A008F5EA6 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				837C24C0291D1483008F5EA6 /* Feed */,
 				837C24A2291D01B3008F5EA6 /* Helpers */,
 				837C24A1291D01A8008F5EA6 /* Shared */,
-				837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */,
 			);
 			path = TelkomselModuleTests;
 			sourceTree = "<group>";
@@ -397,7 +394,6 @@
 				837C24AD291D021F008F5EA6 /* LoadResourcePresenterTest.swift in Sources */,
 				837C24A8291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				837C24A7291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift in Sources */,
-				837C247C291CFEB9008F5EA6 /* TelkomselModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 public final class FeedItemsMapper {
     
     private struct Root: Decodable {
-//        private let ok: Bool
+        private let ok: Bool
         private let data: [Feed]
         
         private struct Feed: Decodable {

@@ -24,7 +24,10 @@ func anyURLRequest() -> URLRequest {
 }
 
 func makeItemsJSON(_ items: [[String: Any]]) -> Data {
-    let json = ["data": items]
+    let json = [
+        "data": items,
+        "ok": true
+    ] as [String : Any]
     return try! JSONSerialization.data(withJSONObject: json)
 }
 
