@@ -43,6 +43,15 @@
 		837C24ED291D482B008F5EA6 /* TelkomseliOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C24E5291D482B008F5EA6 /* TelkomseliOS.framework */; };
 		837C24F2291D482B008F5EA6 /* TelkomseliOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */; };
 		837C24F3291D482B008F5EA6 /* TelkomseliOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 837C24E7291D482B008F5EA6 /* TelkomseliOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		837C2500291D4916008F5EA6 /* TelkomselModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; platformFilter = ios; };
+		837C2501291D4916008F5EA6 /* TelkomselModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		837C2510291D4990008F5EA6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2507291D4990008F5EA6 /* ListViewController.swift */; };
+		837C2511291D4990008F5EA6 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2508291D4990008F5EA6 /* CellController.swift */; };
+		837C2512291D4990008F5EA6 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250B291D4990008F5EA6 /* UITableView+Dequeueing.swift */; };
+		837C2513291D4990008F5EA6 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250C291D4990008F5EA6 /* UIRefreshControl+Helpers.swift */; };
+		837C2514291D4990008F5EA6 /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250D291D4990008F5EA6 /* UITableView+HeaderSizing.swift */; };
+		837C2515291D4990008F5EA6 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250E291D4990008F5EA6 /* UIView+Container.swift */; };
+		837C2516291D4990008F5EA6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250F291D4990008F5EA6 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +69,28 @@
 			remoteGlobalIDString = 837C24E4291D482B008F5EA6;
 			remoteInfo = TelkomseliOS;
 		};
+		837C2502291D4916008F5EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 837C2465291CFEB9008F5EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837C246D291CFEB9008F5EA6;
+			remoteInfo = TelkomselModule;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		837C2504291D4916008F5EA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				837C2501291D4916008F5EA6 /* TelkomselModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TelkomselModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +133,13 @@
 		837C24E7291D482B008F5EA6 /* TelkomseliOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelkomseliOS.h; sourceTree = "<group>"; };
 		837C24EC291D482B008F5EA6 /* TelkomseliOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelkomseliOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelkomseliOSTests.swift; sourceTree = "<group>"; };
+		837C2507291D4990008F5EA6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		837C2508291D4990008F5EA6 /* CellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		837C250B291D4990008F5EA6 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		837C250C291D4990008F5EA6 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
+		837C250D291D4990008F5EA6 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
+		837C250E291D4990008F5EA6 /* UIView+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Container.swift"; sourceTree = "<group>"; };
+		837C250F291D4990008F5EA6 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C2500291D4916008F5EA6 /* TelkomselModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +185,7 @@
 				837C24E6291D482B008F5EA6 /* TelkomseliOS */,
 				837C24F0291D482B008F5EA6 /* TelkomseliOSTests */,
 				837C246F291CFEB9008F5EA6 /* Products */,
+				837C24FA291D48CE008F5EA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,6 +377,7 @@
 		837C24E6291D482B008F5EA6 /* TelkomseliOS */ = {
 			isa = PBXGroup;
 			children = (
+				837C2505291D4990008F5EA6 /* Shared UI */,
 				837C24E7291D482B008F5EA6 /* TelkomseliOS.h */,
 			);
 			path = TelkomseliOS;
@@ -349,6 +389,51 @@
 				837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */,
 			);
 			path = TelkomseliOSTests;
+			sourceTree = "<group>";
+		};
+		837C24FA291D48CE008F5EA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837C2505291D4990008F5EA6 /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				837C2506291D4990008F5EA6 /* Controllers */,
+				837C2509291D4990008F5EA6 /* Views */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		837C2506291D4990008F5EA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				837C2507291D4990008F5EA6 /* ListViewController.swift */,
+				837C2508291D4990008F5EA6 /* CellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		837C2509291D4990008F5EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				837C250A291D4990008F5EA6 /* Helpers */,
+				837C250F291D4990008F5EA6 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		837C250A291D4990008F5EA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				837C250B291D4990008F5EA6 /* UITableView+Dequeueing.swift */,
+				837C250C291D4990008F5EA6 /* UIRefreshControl+Helpers.swift */,
+				837C250D291D4990008F5EA6 /* UITableView+HeaderSizing.swift */,
+				837C250E291D4990008F5EA6 /* UIView+Container.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,10 +502,12 @@
 				837C24E1291D482B008F5EA6 /* Sources */,
 				837C24E2291D482B008F5EA6 /* Frameworks */,
 				837C24E3291D482B008F5EA6 /* Resources */,
+				837C2504291D4916008F5EA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				837C2503291D4916008F5EA6 /* PBXTargetDependency */,
 			);
 			name = TelkomseliOS;
 			productName = TelkomseliOS;
@@ -573,6 +660,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C2512291D4990008F5EA6 /* UITableView+Dequeueing.swift in Sources */,
+				837C2513291D4990008F5EA6 /* UIRefreshControl+Helpers.swift in Sources */,
+				837C2510291D4990008F5EA6 /* ListViewController.swift in Sources */,
+				837C2511291D4990008F5EA6 /* CellController.swift in Sources */,
+				837C2516291D4990008F5EA6 /* ErrorView.swift in Sources */,
+				837C2515291D4990008F5EA6 /* UIView+Container.swift in Sources */,
+				837C2514291D4990008F5EA6 /* UITableView+HeaderSizing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +690,12 @@
 			isa = PBXTargetDependency;
 			target = 837C24E4291D482B008F5EA6 /* TelkomseliOS */;
 			targetProxy = 837C24EE291D482B008F5EA6 /* PBXContainerItemProxy */;
+		};
+		837C2503291D4916008F5EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 837C246D291CFEB9008F5EA6 /* TelkomselModule */;
+			targetProxy = 837C2502291D4916008F5EA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -864,6 +964,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -892,6 +993,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.id.aminfaruq.TelkomseliOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -902,6 +1004,7 @@
 		837C24F8291D482B008F5EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZB5R9B92Y;
@@ -920,6 +1023,7 @@
 		837C24F9291D482B008F5EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZB5R9B92Y;
