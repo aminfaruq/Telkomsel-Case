@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		837C2477291CFEB9008F5EA6 /* TelkomselModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */; };
+		837C247C291CFEB9008F5EA6 /* TelkomselModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */; };
+		837C247D291CFEB9008F5EA6 /* TelkomselModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 837C2471291CFEB9008F5EA6 /* TelkomselModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		837C248B291CFF50008F5EA6 /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = 837C248D291CFF50008F5EA6 /* Shared.strings */; };
+		837C2494291CFF7B008F5EA6 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C248F291CFF7A008F5EA6 /* ResourceLoadingView.swift */; };
+		837C2495291CFF7B008F5EA6 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2490291CFF7A008F5EA6 /* LoadResourcePresenter.swift */; };
+		837C2496291CFF7B008F5EA6 /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2491291CFF7A008F5EA6 /* ResourceLoadingViewModel.swift */; };
+		837C2497291CFF7B008F5EA6 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2492291CFF7B008F5EA6 /* ResourceErrorView.swift */; };
+		837C2498291CFF7B008F5EA6 /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2493291CFF7B008F5EA6 /* ResourceErrorViewModel.swift */; };
+		837C249E291D0003008F5EA6 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C249D291D0003008F5EA6 /* HTTPClient.swift */; };
+		837C24A0291D0086008F5EA6 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C249F291D0086008F5EA6 /* URLSessionHTTPClient.swift */; };
+		837C24A6291D01B3008F5EA6 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24A3291D01B3008F5EA6 /* SharedTestHelpers.swift */; };
+		837C24A7291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24A4291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift */; };
+		837C24A8291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24A5291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift */; };
+		837C24AC291D021F008F5EA6 /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24AA291D021E008F5EA6 /* SharedLocalizationTests.swift */; };
+		837C24AD291D021F008F5EA6 /* LoadResourcePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24AB291D021E008F5EA6 /* LoadResourcePresenterTest.swift */; };
+		837C24B2291D028B008F5EA6 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24B0291D028B008F5EA6 /* URLProtocolStub.swift */; };
+		837C24B3291D028B008F5EA6 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C24B1291D028B008F5EA6 /* URLSessionHTTPClientTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		837C2478291CFEB9008F5EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 837C2465291CFEB9008F5EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837C246D291CFEB9008F5EA6;
+			remoteInfo = TelkomselModule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TelkomselModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		837C2471291CFEB9008F5EA6 /* TelkomselModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelkomselModule.h; sourceTree = "<group>"; };
+		837C2476291CFEB9008F5EA6 /* TelkomselModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelkomselModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelkomselModuleTests.swift; sourceTree = "<group>"; };
+		837C248C291CFF50008F5EA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Shared.strings; sourceTree = "<group>"; };
+		837C248E291CFF66008F5EA6 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Shared.strings; sourceTree = "<group>"; };
+		837C248F291CFF7A008F5EA6 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		837C2490291CFF7A008F5EA6 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		837C2491291CFF7A008F5EA6 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		837C2492291CFF7B008F5EA6 /* ResourceErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		837C2493291CFF7B008F5EA6 /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
+		837C249D291D0003008F5EA6 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		837C249F291D0086008F5EA6 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		837C24A3291D01B3008F5EA6 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		837C24A4291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTestHelpers.swift; sourceTree = "<group>"; };
+		837C24A5291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		837C24AA291D021E008F5EA6 /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
+		837C24AB291D021E008F5EA6 /* LoadResourcePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenterTest.swift; sourceTree = "<group>"; };
+		837C24B0291D028B008F5EA6 /* URLProtocolStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		837C24B1291D028B008F5EA6 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		837C246B291CFEB9008F5EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837C2473291CFEB9008F5EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837C2477291CFEB9008F5EA6 /* TelkomselModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		837C2464291CFEB9008F5EA6 = {
+			isa = PBXGroup;
+			children = (
+				837C2470291CFEB9008F5EA6 /* TelkomselModule */,
+				837C247A291CFEB9008F5EA6 /* TelkomselModuleTests */,
+				837C246F291CFEB9008F5EA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		837C246F291CFEB9008F5EA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */,
+				837C2476291CFEB9008F5EA6 /* TelkomselModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		837C2470291CFEB9008F5EA6 /* TelkomselModule */ = {
+			isa = PBXGroup;
+			children = (
+				837C2486291CFEF9008F5EA6 /* Shared */,
+				837C2487291CFF07008F5EA6 /* Feed */,
+				837C2471291CFEB9008F5EA6 /* TelkomselModule.h */,
+			);
+			path = TelkomselModule;
+			sourceTree = "<group>";
+		};
+		837C247A291CFEB9008F5EA6 /* TelkomselModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				837C24A2291D01B3008F5EA6 /* Helpers */,
+				837C24A1291D01A8008F5EA6 /* Shared */,
+				837C247B291CFEB9008F5EA6 /* TelkomselModuleTests.swift */,
+			);
+			path = TelkomselModuleTests;
+			sourceTree = "<group>";
+		};
+		837C2486291CFEF9008F5EA6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				837C2488291CFF34008F5EA6 /* Shared Presentation */,
+				837C249C291CFFD6008F5EA6 /* Shared API */,
+				837C249B291CFFCC008F5EA6 /* Shared API Infra */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		837C2487291CFF07008F5EA6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		837C2488291CFF34008F5EA6 /* Shared Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				837C2490291CFF7A008F5EA6 /* LoadResourcePresenter.swift */,
+				837C2492291CFF7B008F5EA6 /* ResourceErrorView.swift */,
+				837C2493291CFF7B008F5EA6 /* ResourceErrorViewModel.swift */,
+				837C248F291CFF7A008F5EA6 /* ResourceLoadingView.swift */,
+				837C2491291CFF7A008F5EA6 /* ResourceLoadingViewModel.swift */,
+				837C248D291CFF50008F5EA6 /* Shared.strings */,
+			);
+			path = "Shared Presentation";
+			sourceTree = "<group>";
+		};
+		837C249B291CFFCC008F5EA6 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				837C249D291D0003008F5EA6 /* HTTPClient.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		837C249C291CFFD6008F5EA6 /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				837C249F291D0086008F5EA6 /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		837C24A1291D01A8008F5EA6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				837C24AE291D028B008F5EA6 /* Shared API Infra */,
+				837C24A9291D021E008F5EA6 /* Shared Presentation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		837C24A2291D01B3008F5EA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				837C24A3291D01B3008F5EA6 /* SharedTestHelpers.swift */,
+				837C24A4291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift */,
+				837C24A5291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		837C24A9291D021E008F5EA6 /* Shared Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				837C24AA291D021E008F5EA6 /* SharedLocalizationTests.swift */,
+				837C24AB291D021E008F5EA6 /* LoadResourcePresenterTest.swift */,
+			);
+			path = "Shared Presentation";
+			sourceTree = "<group>";
+		};
+		837C24AE291D028B008F5EA6 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				837C24AF291D028B008F5EA6 /* Helpers */,
+				837C24B1291D028B008F5EA6 /* URLSessionHTTPClientTests.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		837C24AF291D028B008F5EA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				837C24B0291D028B008F5EA6 /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		837C2469291CFEB9008F5EA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837C247D291CFEB9008F5EA6 /* TelkomselModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		837C246D291CFEB9008F5EA6 /* TelkomselModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837C2480291CFEB9008F5EA6 /* Build configuration list for PBXNativeTarget "TelkomselModule" */;
+			buildPhases = (
+				837C2469291CFEB9008F5EA6 /* Headers */,
+				837C246A291CFEB9008F5EA6 /* Sources */,
+				837C246B291CFEB9008F5EA6 /* Frameworks */,
+				837C246C291CFEB9008F5EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelkomselModule;
+			productName = TelkomselModule;
+			productReference = 837C246E291CFEB9008F5EA6 /* TelkomselModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		837C2475291CFEB9008F5EA6 /* TelkomselModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837C2483291CFEB9008F5EA6 /* Build configuration list for PBXNativeTarget "TelkomselModuleTests" */;
+			buildPhases = (
+				837C2472291CFEB9008F5EA6 /* Sources */,
+				837C2473291CFEB9008F5EA6 /* Frameworks */,
+				837C2474291CFEB9008F5EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				837C2479291CFEB9008F5EA6 /* PBXTargetDependency */,
+			);
+			name = TelkomselModuleTests;
+			productName = TelkomselModuleTests;
+			productReference = 837C2476291CFEB9008F5EA6 /* TelkomselModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		837C2465291CFEB9008F5EA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					837C246D291CFEB9008F5EA6 = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+					};
+					837C2475291CFEB9008F5EA6 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 837C2468291CFEB9008F5EA6 /* Build configuration list for PBXProject "TelkomselModule" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				id,
+			);
+			mainGroup = 837C2464291CFEB9008F5EA6;
+			productRefGroup = 837C246F291CFEB9008F5EA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				837C246D291CFEB9008F5EA6 /* TelkomselModule */,
+				837C2475291CFEB9008F5EA6 /* TelkomselModuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		837C246C291CFEB9008F5EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837C248B291CFF50008F5EA6 /* Shared.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837C2474291CFEB9008F5EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		837C246A291CFEB9008F5EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837C24A0291D0086008F5EA6 /* URLSessionHTTPClient.swift in Sources */,
+				837C2496291CFF7B008F5EA6 /* ResourceLoadingViewModel.swift in Sources */,
+				837C2495291CFF7B008F5EA6 /* LoadResourcePresenter.swift in Sources */,
+				837C249E291D0003008F5EA6 /* HTTPClient.swift in Sources */,
+				837C2494291CFF7B008F5EA6 /* ResourceLoadingView.swift in Sources */,
+				837C2498291CFF7B008F5EA6 /* ResourceErrorViewModel.swift in Sources */,
+				837C2497291CFF7B008F5EA6 /* ResourceErrorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837C2472291CFEB9008F5EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837C24A6291D01B3008F5EA6 /* SharedTestHelpers.swift in Sources */,
+				837C24B2291D028B008F5EA6 /* URLProtocolStub.swift in Sources */,
+				837C24AC291D021F008F5EA6 /* SharedLocalizationTests.swift in Sources */,
+				837C24B3291D028B008F5EA6 /* URLSessionHTTPClientTests.swift in Sources */,
+				837C24AD291D021F008F5EA6 /* LoadResourcePresenterTest.swift in Sources */,
+				837C24A8291D01B3008F5EA6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				837C24A7291D01B3008F5EA6 /* SharedLocalizationTestHelpers.swift in Sources */,
+				837C247C291CFEB9008F5EA6 /* TelkomselModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		837C2479291CFEB9008F5EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837C246D291CFEB9008F5EA6 /* TelkomselModule */;
+			targetProxy = 837C2478291CFEB9008F5EA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		837C248D291CFF50008F5EA6 /* Shared.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				837C248C291CFF50008F5EA6 /* en */,
+				837C248E291CFF66008F5EA6 /* id */,
+			);
+			name = Shared.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		837C247E291CFEB9008F5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		837C247F291CFEB9008F5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		837C2481291CFEB9008F5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WZB5R9B92Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.id.aminfaruq.TelkomselModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		837C2482291CFEB9008F5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WZB5R9B92Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.id.aminfaruq.TelkomselModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		837C2484291CFEB9008F5EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WZB5R9B92Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.id.aminfaruq.TelkomselModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		837C2485291CFEB9008F5EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WZB5R9B92Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.id.aminfaruq.TelkomselModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		837C2468291CFEB9008F5EA6 /* Build configuration list for PBXProject "TelkomselModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837C247E291CFEB9008F5EA6 /* Debug */,
+				837C247F291CFEB9008F5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837C2480291CFEB9008F5EA6 /* Build configuration list for PBXNativeTarget "TelkomselModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837C2481291CFEB9008F5EA6 /* Debug */,
+				837C2482291CFEB9008F5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837C2483291CFEB9008F5EA6 /* Build configuration list for PBXNativeTarget "TelkomselModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837C2484291CFEB9008F5EA6 /* Debug */,
+				837C2485291CFEB9008F5EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 837C2465291CFEB9008F5EA6 /* Project object */;
+}
