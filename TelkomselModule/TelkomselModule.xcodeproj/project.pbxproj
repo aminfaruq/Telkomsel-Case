@@ -52,6 +52,14 @@
 		837C2514291D4990008F5EA6 /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250D291D4990008F5EA6 /* UITableView+HeaderSizing.swift */; };
 		837C2515291D4990008F5EA6 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250E291D4990008F5EA6 /* UIView+Container.swift */; };
 		837C2516291D4990008F5EA6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C250F291D4990008F5EA6 /* ErrorView.swift */; };
+		837C251E291D4A71008F5EA6 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C251B291D4A71008F5EA6 /* XCTestCase+Snapshot.swift */; };
+		837C251F291D4A71008F5EA6 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C251C291D4A71008F5EA6 /* UIImage+TestHelpers.swift */; };
+		837C2520291D4A71008F5EA6 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C251D291D4A71008F5EA6 /* UIViewController+Snapshot.swift */; };
+		837C2523291D4A9A008F5EA6 /* ListSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2522291D4A9A008F5EA6 /* ListSnapshotTest.swift */; };
+		837C2529291D4AFF008F5EA6 /* EMPTY_LIST_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 837C2525291D4AFE008F5EA6 /* EMPTY_LIST_dark.png */; };
+		837C252A291D4AFF008F5EA6 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 837C2526291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_light.png */; };
+		837C252B291D4AFF008F5EA6 /* LIST_WITH_ERROR_MESSAGE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 837C2527291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_dark.png */; };
+		837C252C291D4AFF008F5EA6 /* EMPTY_LIST_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 837C2528291D4AFE008F5EA6 /* EMPTY_LIST_light.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +148,14 @@
 		837C250D291D4990008F5EA6 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
 		837C250E291D4990008F5EA6 /* UIView+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Container.swift"; sourceTree = "<group>"; };
 		837C250F291D4990008F5EA6 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		837C251B291D4A71008F5EA6 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		837C251C291D4A71008F5EA6 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		837C251D291D4A71008F5EA6 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		837C2522291D4A9A008F5EA6 /* ListSnapshotTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSnapshotTest.swift; sourceTree = "<group>"; };
+		837C2525291D4AFE008F5EA6 /* EMPTY_LIST_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_LIST_dark.png; sourceTree = "<group>"; };
+		837C2526291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LIST_WITH_ERROR_MESSAGE_light.png; sourceTree = "<group>"; };
+		837C2527291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LIST_WITH_ERROR_MESSAGE_dark.png; sourceTree = "<group>"; };
+		837C2528291D4AFE008F5EA6 /* EMPTY_LIST_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_LIST_light.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +393,7 @@
 		837C24E6291D482B008F5EA6 /* TelkomseliOS */ = {
 			isa = PBXGroup;
 			children = (
+				837C2517291D4A3F008F5EA6 /* Feed UI */,
 				837C2505291D4990008F5EA6 /* Shared UI */,
 				837C24E7291D482B008F5EA6 /* TelkomseliOS.h */,
 			);
@@ -386,6 +403,8 @@
 		837C24F0291D482B008F5EA6 /* TelkomseliOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				837C2521291D4A86008F5EA6 /* Shared UI */,
+				837C251A291D4A71008F5EA6 /* Helpers */,
 				837C24F1291D482B008F5EA6 /* TelkomseliOSTests.swift */,
 			);
 			path = TelkomseliOSTests;
@@ -434,6 +453,59 @@
 				837C250E291D4990008F5EA6 /* UIView+Container.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		837C2517291D4A3F008F5EA6 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				837C2519291D4A51008F5EA6 /* Controllers */,
+				837C2518291D4A4B008F5EA6 /* Views */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		837C2518291D4A4B008F5EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		837C2519291D4A51008F5EA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		837C251A291D4A71008F5EA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				837C251B291D4A71008F5EA6 /* XCTestCase+Snapshot.swift */,
+				837C251C291D4A71008F5EA6 /* UIImage+TestHelpers.swift */,
+				837C251D291D4A71008F5EA6 /* UIViewController+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		837C2521291D4A86008F5EA6 /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				837C2524291D4AFE008F5EA6 /* snapshots */,
+				837C2522291D4A9A008F5EA6 /* ListSnapshotTest.swift */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		837C2524291D4AFE008F5EA6 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				837C2528291D4AFE008F5EA6 /* EMPTY_LIST_light.png */,
+				837C2525291D4AFE008F5EA6 /* EMPTY_LIST_dark.png */,
+				837C2526291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_light.png */,
+				837C2527291D4AFE008F5EA6 /* LIST_WITH_ERROR_MESSAGE_dark.png */,
+			);
+			path = snapshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +679,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C252C291D4AFF008F5EA6 /* EMPTY_LIST_light.png in Resources */,
+				837C2529291D4AFF008F5EA6 /* EMPTY_LIST_dark.png in Resources */,
+				837C252B291D4AFF008F5EA6 /* LIST_WITH_ERROR_MESSAGE_dark.png in Resources */,
+				837C252A291D4AFF008F5EA6 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +750,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C2523291D4A9A008F5EA6 /* ListSnapshotTest.swift in Sources */,
+				837C251E291D4A71008F5EA6 /* XCTestCase+Snapshot.swift in Sources */,
 				837C24F2291D482B008F5EA6 /* TelkomseliOSTests.swift in Sources */,
+				837C2520291D4A71008F5EA6 /* UIViewController+Snapshot.swift in Sources */,
+				837C251F291D4A71008F5EA6 /* UIImage+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
