@@ -18,13 +18,13 @@ public final class FeedImageCellController: NSObject {
 
     private let viewModel: FeedImageViewModel
     private let delegate: FeedImageCellControllerDelegate
-   // private let selection: () -> Void
+    private let selection: () -> Void
     private var cell: FeedImageCell?
 
-    public init(viewModel: FeedImageViewModel, delegate: FeedImageCellControllerDelegate/*, selection: @escaping () -> Void*/) {
+    public init(viewModel: FeedImageViewModel, delegate: FeedImageCellControllerDelegate, selection: @escaping () -> Void) {
         self.viewModel = viewModel
         self.delegate = delegate
-        //self.selection = selection
+        self.selection = selection
     }
 }
 
@@ -36,7 +36,7 @@ extension FeedImageCellController: UITableViewDataSource, UITableViewDelegate, U
         cell = tableView.dequeueReusableCell()
         cell?.feedProductNameLabel.text = viewModel.productName
         cell?.feedImageView.image = nil
-        cell?.backgroundColor = hexStringToUIColor(hex: "#\(viewModel.colorTheme)")
+        cell?.backgroundColor = UIColor.hexStringToUIColor(hex: "#\(viewModel.colorTheme)")
         cell?.onRetry = { [weak self] in
             self?.delegate.didRequestImage()
         }
@@ -45,7 +45,7 @@ extension FeedImageCellController: UITableViewDataSource, UITableViewDelegate, U
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //selection()
+        selection()
     }
     
     public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -8,6 +8,7 @@
 import os
 import UIKit
 import Combine
+import CoreData
 import TelkomseliOS
 import TelkomselModule
 
@@ -32,7 +33,23 @@ class TabBarController: UITabBarController {
     }
     
     private lazy var logger = Logger(subsystem: "co.id.aminfaruq.TelkomselApp", category: "main")
-
+    
+    private lazy var store: FeedStore & FeedImageDataStore = {
+        do {
+            return try CoreDataFeedStore(
+                storeURL: NSPersistentContainer
+                    .defaultDirectoryURL()
+                    .appendingPathComponent("feed-store.sqlite"))
+        } catch {
+            assertionFailure("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
+            logger.fault("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
+            return NullStore()
+        }
+    }()
+    
+    private lazy var localFeedLoader: LocalFeedLoader = {
+        LocalFeedLoader(store: store)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,25 +60,24 @@ class TabBarController: UITabBarController {
         setupVCs()
     }
     
-    func setupVCs() {
-        viewControllers = [
-            createNavController(for: FeedUIComposer.feedComposedWith(
-                feedLoader: makeRemoteFeedLoaderWithLocalFallback,
-                imageLoader: makeLocalImageLoaderWithRemoteFallback),
-                                title: NSLocalizedString("My Feed", comment: ""), image: UIImage(systemName: "house")!),
-            
-            createNavController(for: ViewController(), title: NSLocalizedString("My Product", comment: ""), image: UIImage(systemName: "person")!)
-        ]
+    internal lazy var feedController = FeedUIComposer.feedComposedWith(
+        feedLoader: makeRemoteFeedLoader,
+        imageLoader: makeImageLoaderWithRemoteFallback,
+        selection: showDetail)
+  
+    private func showDetail(for item: FeedItem) {
+        let detail = DetailUIComposer.detailComposedWith(item: item)
+        feedController.navigationController?.pushViewController(detail, animated: true)
     }
     
-    private func makeRemoteFeedLoaderWithLocalFallback() -> AnyPublisher<MapperItem<FeedItem>, Error> {
-        makeRemoteFeedLoader()
+    private func makeRemoteFeedLoader() -> AnyPublisher<MapperItem<FeedItem>, Error> {
+        makeRemoteItemFeedLoader()
             .map(makeFirstPage)
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
     }
     
-    private func makeRemoteFeedLoader() -> AnyPublisher<[FeedItem], Error> {
+    private func makeRemoteItemFeedLoader() -> AnyPublisher<[FeedItem], Error> {
         let url = FeedEndpoint.post.url(baseURL: baseURL)
         return httpClient
             .postPublisher(url: url)
@@ -69,7 +85,7 @@ class TabBarController: UITabBarController {
             .eraseToAnyPublisher()
     }
     
-    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> FeedImageDataLoader.Publisher {
+    private func makeImageLoaderWithRemoteFallback(url: URL) -> FeedImageDataLoader.Publisher {
         return httpClient
             .postPublisher(url: url)
             .tryMap(FeedImageDataMapper.map)
@@ -83,6 +99,20 @@ class TabBarController: UITabBarController {
     
     private func makePage(items: [FeedItem]) -> MapperItem<FeedItem> {
         MapperItem(items: items)
+    }
+}
+
+extension TabBarController {
+    func setupVCs() {
+        viewControllers = [
+            createNavController(for: feedController,
+                                title: NSLocalizedString("My Feed", comment: ""),
+                                image: UIImage(systemName: "house")!),
+            
+            createNavController(for: ViewController(),
+                                title: NSLocalizedString("My Product", comment: ""),
+                                image: UIImage(systemName: "person")!)
+        ]
     }
 }
 

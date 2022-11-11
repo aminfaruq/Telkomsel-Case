@@ -12,16 +12,16 @@ import TelkomselModule
 final class FeedViewAdapter: ResourceView {
     private weak var controller: ListViewController?
     private let imageLoader: (URL) -> FeedImageDataLoader.Publisher
-    //private let selection: (FeedItem) -> Void
+    private let selection: (FeedItem) -> Void
     private let currentFeed: [FeedItem: CellController]
 
     private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<FeedImageCellController>>
     
-    init(currentFeed: [FeedItem: CellController] = [:], controller: ListViewController, imageLoader: @escaping (URL) -> FeedImageDataLoader.Publisher/*, selection: @escaping (FeedItem) -> Void*/) {
+    init(currentFeed: [FeedItem: CellController] = [:], controller: ListViewController, imageLoader: @escaping (URL) -> FeedImageDataLoader.Publisher, selection: @escaping (FeedItem) -> Void) {
         self.currentFeed = currentFeed
         self.controller = controller
         self.imageLoader = imageLoader
-        //self.selection = selection
+        self.selection = selection
     }
     
     func display(_ viewModel: MapperItem<FeedItem>) {
@@ -39,10 +39,10 @@ final class FeedViewAdapter: ResourceView {
             
             let view = FeedImageCellController(
                 viewModel: FeedImagePresenter.map(model),
-                delegate: adapter/*,
+                delegate: adapter,
                 selection: { [selection] in
                     selection(model)
-                }*/)
+                })
             adapter.presenter = LoadResourcePresenter(
                 resourceView: WeakRefVirtualProxy(view),
                 loadingView: WeakRefVirtualProxy(view),
