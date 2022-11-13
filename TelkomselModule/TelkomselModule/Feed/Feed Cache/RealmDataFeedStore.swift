@@ -8,7 +8,6 @@
 import RealmSwift
 
 public final class RealmDataFeedStore {
-    //let realm = try! Realm()
     private let realm: Realm
     
     public init(realm: Realm) {
