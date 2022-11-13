@@ -35,8 +35,8 @@ extension RealmDataFeedStore : FeedStore {
     }
     
     public func retrieve() throws -> Results<LocalFeedItem> {
-            let object = realm.objects(LocalFeedItem.self)
-            return object
+        let object = realm.objects(LocalFeedItem.self)
+        return object
     }
     
     public func isProductSaved(_ productName: String) throws -> Bool {
