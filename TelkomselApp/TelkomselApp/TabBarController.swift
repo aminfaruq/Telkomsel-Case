@@ -75,7 +75,7 @@ class TabBarController: UITabBarController {
     private func makeLocalFeedLoader() -> AnyPublisher<MapperItem<FeedItem>, Error> {
         localFeedLoader.loadPublisher()
             .map(makeFirstPage)
-            .subscribe(on: scheduler)
+            .dispatchOnMainQueue()
             .eraseToAnyPublisher()
     }
     

@@ -41,11 +41,11 @@ public final class DetailController: UIViewController {
     
     private func bindAction() {
         if viewModel.isProductSaved(productName: item.productName) {
-            detailActionBtn.backgroundColor = .red
+            detailActionBtn.backgroundColor = .systemRed
             detailActionBtn.setTitle("Delete", for: .normal)
             buttonIsSelected = true
         } else {
-            detailActionBtn.backgroundColor = .blue
+            detailActionBtn.backgroundColor = .systemBlue
             detailActionBtn.setTitle("Save", for: .normal)
             buttonIsSelected = false
         }
@@ -53,11 +53,11 @@ public final class DetailController: UIViewController {
     
     @IBAction func actionButton(_ sender: UIButton) {
         if buttonIsSelected {
-            detailActionBtn.backgroundColor = .red
+            detailActionBtn.backgroundColor = .systemRed
             detailActionBtn.setTitle("Delete", for: .normal)
             viewModel.deleteProduct(productName: item.productName)
         } else {
-            detailActionBtn.backgroundColor = .blue
+            detailActionBtn.backgroundColor = .systemBlue
             detailActionBtn.setTitle("Save", for: .normal)
             viewModel.saveProduct(item: item)
         }

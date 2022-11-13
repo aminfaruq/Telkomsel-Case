@@ -27,6 +27,13 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         refresh()
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureTableView()
+        refresh()
+    }
+    
     private func configureTableView() {
         dataSource.defaultRowAnimation = .fade
         tableView.dataSource = dataSource
