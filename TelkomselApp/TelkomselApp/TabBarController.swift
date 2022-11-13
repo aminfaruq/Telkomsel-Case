@@ -8,9 +8,9 @@
 import os
 import UIKit
 import Combine
-import CoreData
 import TelkomseliOS
 import TelkomselModule
+import RealmSwift
 
 class TabBarController: UITabBarController {
     
@@ -34,21 +34,13 @@ class TabBarController: UITabBarController {
     
     private lazy var logger = Logger(subsystem: "co.id.aminfaruq.TelkomselApp", category: "main")
     
-    private lazy var store: FeedStore & FeedImageDataStore = {
-        do {
-            return try CoreDataFeedStore(
-                storeURL: NSPersistentContainer
-                    .defaultDirectoryURL()
-                    .appendingPathComponent("feed-store.sqlite"))
-        } catch {
-            assertionFailure("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
-            logger.fault("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
-            return NullStore()
-        }
+    private lazy var store: FeedStore = {
+        let realm = try! Realm()
+        return RealmDataFeedStore(realm: realm)
     }()
-    
+
     private lazy var localFeedLoader: LocalFeedLoader = {
-        LocalFeedLoader(store: store)
+        LocalFeedLoader(store: store )
     }()
     
     override func viewDidLoad() {
@@ -64,10 +56,27 @@ class TabBarController: UITabBarController {
         feedLoader: makeRemoteFeedLoader,
         imageLoader: makeImageLoaderWithRemoteFallback,
         selection: showDetail)
+    
+    internal lazy var favoriteFeedController = FeedUIComposer.feedComposedWith(
+        feedLoader: makeLocalFeedLoader,
+        imageLoader: makeImageLoaderWithRemoteFallback,
+        selection: showDetailFavorite)
   
     private func showDetail(for item: FeedItem) {
         let detail = DetailUIComposer.detailComposedWith(item: item)
         feedController.navigationController?.pushViewController(detail, animated: true)
+    }
+    
+    private func showDetailFavorite(for item: FeedItem) {
+        let detail = DetailUIComposer.detailComposedWith(item: item)
+        favoriteFeedController.navigationController?.pushViewController(detail, animated: true)
+    }
+    
+    private func makeLocalFeedLoader() -> AnyPublisher<MapperItem<FeedItem>, Error> {
+        localFeedLoader.loadPublisher()
+            .map(makeFirstPage)
+            .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
     }
     
     private func makeRemoteFeedLoader() -> AnyPublisher<MapperItem<FeedItem>, Error> {
@@ -109,7 +118,7 @@ extension TabBarController {
                                 title: NSLocalizedString("My Feed", comment: ""),
                                 image: UIImage(systemName: "house")!),
             
-            createNavController(for: ViewController(),
+            createNavController(for: favoriteFeedController,
                                 title: NSLocalizedString("My Product", comment: ""),
                                 image: UIImage(systemName: "person")!)
         ]

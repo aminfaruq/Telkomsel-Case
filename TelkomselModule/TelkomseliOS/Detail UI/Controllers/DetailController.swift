@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 import TelkomselModule
 
 public final class DetailController: UIViewController {
@@ -16,11 +17,17 @@ public final class DetailController: UIViewController {
     @IBOutlet private(set) public var detailRatingLabel: UILabel!
     @IBOutlet private(set) public var detailPublisherLabel: UILabel!
     @IBOutlet private(set) public var detailLatestVersionLabel: UILabel!
+    @IBOutlet private(set) public var detailActionBtn: UIButton!
+
+    var viewModel: DetailControllerVM!
 
     public var item: FeedItem!
-    
+    private var buttonIsSelected = false
+
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel = DetailControllerVM()
 
         detailImageView.setImageFromURL(stringUrl: item.productLogo)
         backgroudView.backgroundColor = UIColor.hexStringToUIColor(hex: "#\(item.colorTheme)")
@@ -29,6 +36,33 @@ public final class DetailController: UIViewController {
         detailRatingLabel.text = "Rating: \(item.rating)"
         detailPublisherLabel.text = item.publisher
         detailLatestVersionLabel.text = "Version: \(item.latestVersion)"
+        
+        bindAction()
+    }
+    
+    private func bindAction() {
+        if viewModel.isProductSaved(productName: item.productName) {
+            detailActionBtn.backgroundColor = .red
+            detailActionBtn.setTitle("Delete", for: .normal)
+            buttonIsSelected = true
+        } else {
+            detailActionBtn.backgroundColor = .blue
+            detailActionBtn.setTitle("Save", for: .normal)
+            buttonIsSelected = false
+        }
+    }
+    
+    @IBAction func actionButton(_ sender: UIButton) {
+        if buttonIsSelected {
+            detailActionBtn.backgroundColor = .red
+            detailActionBtn.setTitle("Delete", for: .normal)
+            viewModel.deleteProduct(productName: item.productName)
+        } else {
+            detailActionBtn.backgroundColor = .blue
+            detailActionBtn.setTitle("Save", for: .normal)
+            viewModel.saveProduct(item: item)
+        }
+        bindAction()
     }
 }
 

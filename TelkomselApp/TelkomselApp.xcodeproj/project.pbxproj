@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8369EDBD291E0E00003CA27A /* DetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369EDBC291E0E00003CA27A /* DetailUIComposer.swift */; };
-		8369EDEA291E44B2003CA27A /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369EDE9291E44B2003CA27A /* NullStore.swift */; };
 		837C2553291D598C008F5EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2552291D598C008F5EA6 /* AppDelegate.swift */; };
 		837C2555291D598C008F5EA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2554291D598C008F5EA6 /* SceneDelegate.swift */; };
 		837C2557291D598C008F5EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C2556291D598C008F5EA6 /* ViewController.swift */; };
@@ -55,7 +54,6 @@
 
 /* Begin PBXFileReference section */
 		8369EDBC291E0E00003CA27A /* DetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUIComposer.swift; sourceTree = "<group>"; };
-		8369EDE9291E44B2003CA27A /* NullStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		837C254F291D598C008F5EA6 /* TelkomselApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelkomselApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C2552291D598C008F5EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		837C2554291D598C008F5EA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			children = (
 				837C2586291D6261008F5EA6 /* WeakRefVirtualProxy.swift */,
 				837C2580291D6135008F5EA6 /* CombineHelpers.swift */,
-				8369EDE9291E44B2003CA27A /* NullStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 				837C2581291D6135008F5EA6 /* CombineHelpers.swift in Sources */,
 				837C2555291D598C008F5EA6 /* SceneDelegate.swift in Sources */,
 				837C2583291D61CB008F5EA6 /* LoadResourcePresentationAdapter.swift in Sources */,
-				8369EDEA291E44B2003CA27A /* NullStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

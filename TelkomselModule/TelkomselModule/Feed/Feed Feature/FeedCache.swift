@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol FeedCache {
-    func save(_ feed: [FeedItem]) throws
+    func save(_ feed: FeedItem) throws
+    func isProductSaved(_ productName: String) throws -> Bool
+    func deleteCacheFeed(_ productName: String) throws
 }

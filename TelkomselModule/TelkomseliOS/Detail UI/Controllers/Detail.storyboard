@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,6 +72,9 @@
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                        <connections>
+                                                            <action selector="actionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gQ6-t0-boO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -109,6 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroudView" destination="MoS-yk-jlc" id="blB-dG-2Wo"/>
+                        <outlet property="detailActionBtn" destination="hrp-Mf-CON" id="7Y5-3B-lzW"/>
                         <outlet property="detailDescriptionLabel" destination="bd5-Md-NZI" id="ek9-xK-YYf"/>
                         <outlet property="detailImageView" destination="SDu-T3-cIn" id="y4w-UC-La0"/>
                         <outlet property="detailLatestVersionLabel" destination="dWm-33-hcT" id="P4f-bA-bfg"/>

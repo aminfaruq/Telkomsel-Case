@@ -25,6 +25,7 @@ public final class DetailUIComposer {
         let storyboard = UIStoryboard(name: "Detail", bundle: bundle)
         let detailController = storyboard.instantiateInitialViewController() as! DetailController
         detailController.item = item
+        detailController.hidesBottomBarWhenPushed = true
         return detailController
     }
 
