@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "837C246D291CFEB9008F5EA6"
-               BuildableName = "TelkomselModule.framework"
-               BlueprintName = "TelkomselModule"
-               ReferencedContainer = "container:TelkomselModule.xcodeproj">
+               BlueprintIdentifier = "837C254E291D598C008F5EA6"
+               BuildableName = "TelkomselApp.app"
+               BlueprintName = "TelkomselApp"
+               ReferencedContainer = "container:TelkomselApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,16 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      systemAttachmentLifetime = "keepNever"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "837C246D291CFEB9008F5EA6"
-            BuildableName = "TelkomselModule.framework"
-            BlueprintName = "TelkomselModule"
-            ReferencedContainer = "container:TelkomselModule.xcodeproj">
+            BlueprintIdentifier = "837C254E291D598C008F5EA6"
+            BuildableName = "TelkomselApp.app"
+            BlueprintName = "TelkomselApp"
+            ReferencedContainer = "container:TelkomselApp.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -45,10 +44,10 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "837C2475291CFEB9008F5EA6"
-               BuildableName = "TelkomselModuleTests.xctest"
-               BlueprintName = "TelkomselModuleTests"
-               ReferencedContainer = "container:TelkomselModule.xcodeproj">
+               BlueprintIdentifier = "837C2573291D60BC008F5EA6"
+               BuildableName = "TelkomselAppTests.xctest"
+               BlueprintName = "TelkomselAppTests"
+               ReferencedContainer = "container:TelkomselApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,6 +62,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "837C254E291D598C008F5EA6"
+            BuildableName = "TelkomselApp.app"
+            BlueprintName = "TelkomselApp"
+            ReferencedContainer = "container:TelkomselApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -70,15 +79,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "837C246D291CFEB9008F5EA6"
-            BuildableName = "TelkomselModule.framework"
-            BlueprintName = "TelkomselModule"
-            ReferencedContainer = "container:TelkomselModule.xcodeproj">
+            BlueprintIdentifier = "837C254E291D598C008F5EA6"
+            BuildableName = "TelkomselApp.app"
+            BlueprintName = "TelkomselApp"
+            ReferencedContainer = "container:TelkomselApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
