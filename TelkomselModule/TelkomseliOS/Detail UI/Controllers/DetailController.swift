@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 import TelkomselModule
 
 public final class DetailController: UIViewController {
