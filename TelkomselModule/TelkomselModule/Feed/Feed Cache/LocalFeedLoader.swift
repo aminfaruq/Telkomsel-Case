@@ -41,16 +41,19 @@ extension LocalFeedLoader: FeedCache {
 
 extension LocalFeedLoader {
     public func load() throws -> [FeedItem] {
-        return try store.retrieve().map { result in
-            FeedItem(
-                productName: result.productName,
-                productLogo: URL(string: result.productLogo)!,
-                description: result.productDescription,
-                rating: result.rating,
-                latestVersion: result.latestVersion,
-                publisher: result.publisher,
-                colorTheme: result.colorTheme)
+        if let cache = try store.retrieve() {
+            return cache.map { result in
+                FeedItem(
+                    productName: result.productName,
+                    productLogo: URL(string: result.productLogo)!,
+                    description: result.productDescription,
+                    rating: result.rating,
+                    latestVersion: result.latestVersion,
+                    publisher: result.publisher,
+                    colorTheme: result.colorTheme)
+            }
         }
+        return []
     }
 }
 

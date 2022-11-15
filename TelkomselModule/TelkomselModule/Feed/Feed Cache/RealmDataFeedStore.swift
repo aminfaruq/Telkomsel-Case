@@ -27,14 +27,21 @@ extension RealmDataFeedStore : FeedStore {
     }
     
     public func insert(_ feed: LocalFeedItem) throws {
-        let product = LocalFeedItem(productName: feed.productName, productLogo: feed.productLogo, productDescription: feed.productDescription, rating: feed.rating, latestVersion: feed.latestVersion, publisher: feed.publisher, colorTheme: feed.colorTheme)
+        let product = LocalFeedItem(
+            productName: feed.productName,
+            productLogo: feed.productLogo,
+            productDescription: feed.productDescription,
+            rating: feed.rating,
+            latestVersion: feed.latestVersion,
+            publisher: feed.publisher,
+            colorTheme: feed.colorTheme)
         try! self.realm.write {
             self.realm.add(product)
         }
         
     }
     
-    public func retrieve() throws -> Results<LocalFeedItem> {
+    public func retrieve() throws -> CachedFeed? {
         let object = realm.objects(LocalFeedItem.self)
         return object
     }

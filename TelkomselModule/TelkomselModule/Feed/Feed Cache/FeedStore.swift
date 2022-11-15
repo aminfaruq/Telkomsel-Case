@@ -8,9 +8,11 @@
 import Foundation
 import RealmSwift
 
+public  typealias CachedFeed = Results<LocalFeedItem>
+
 public protocol FeedStore {
     func deleteCacheFeed(_ productName: String) throws
     func isProductSaved(_ productName: String) throws -> Bool
     func insert(_ feed: LocalFeedItem) throws
-    func retrieve() throws -> Results<LocalFeedItem>
+    func retrieve() throws -> CachedFeed?
 }
