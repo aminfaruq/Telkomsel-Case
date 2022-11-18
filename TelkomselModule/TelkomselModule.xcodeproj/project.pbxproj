@@ -81,7 +81,7 @@
 		83B7BF3929209C150036AA42 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7BF3829209C140036AA42 /* FeedStore.swift */; };
 		83B7BF3B29209D890036AA42 /* RealmDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7BF3A29209D890036AA42 /* RealmDataFeedStore.swift */; };
 		83B7BF3D2920A2BE0036AA42 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7BF3C2920A2BE0036AA42 /* LocalFeedLoader.swift */; };
-		83B7BF3F2920C5040036AA42 /* DetailControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7BF3E2920C5040036AA42 /* DetailControllerVM.swift */; };
+		83B7BF3F2920C5040036AA42 /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7BF3E2920C5040036AA42 /* DetailViewPresenter.swift */; };
 		83DFCE422923526F002DE24D /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFCE412923526F002DE24D /* FeedStoreSpy.swift */; };
 /* End PBXBuildFile section */
 
@@ -198,7 +198,7 @@
 		83B7BF3829209C140036AA42 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		83B7BF3A29209D890036AA42 /* RealmDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataFeedStore.swift; sourceTree = "<group>"; };
 		83B7BF3C2920A2BE0036AA42 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
-		83B7BF3E2920C5040036AA42 /* DetailControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerVM.swift; sourceTree = "<group>"; };
+		83B7BF3E2920C5040036AA42 /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
 		83DFCE412923526F002DE24D /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,7 +253,7 @@
 			children = (
 				8369EDB8291E08F8003CA27A /* Detail.storyboard */,
 				8369EDBA291E0920003CA27A /* DetailController.swift */,
-				83B7BF3E2920C5040036AA42 /* DetailControllerVM.swift */,
+				83B7BF3E2920C5040036AA42 /* DetailViewPresenter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -899,7 +899,7 @@
 				837C2535291D4CA2008F5EA6 /* FeedImageCell.swift in Sources */,
 				837C2512291D4990008F5EA6 /* UITableView+Dequeueing.swift in Sources */,
 				837C2533291D4C61008F5EA6 /* UIView+Shimmering.swift in Sources */,
-				83B7BF3F2920C5040036AA42 /* DetailControllerVM.swift in Sources */,
+				83B7BF3F2920C5040036AA42 /* DetailViewPresenter.swift in Sources */,
 				837C2513291D4990008F5EA6 /* UIRefreshControl+Helpers.swift in Sources */,
 				8369EDBB291E0920003CA27A /* DetailController.swift in Sources */,
 				837C2510291D4990008F5EA6 /* ListViewController.swift in Sources */,
