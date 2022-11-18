@@ -89,7 +89,7 @@ extension DetailController: DetailViewDelegate {
         try? localFeedLoader.deleteCacheFeed(productName)
     }
     
-    public func didShowProductByName(productName: String) -> Bool {
-        try! localFeedLoader.isProductSaved(productName)
+    public func didShowProductByName(productName: String) -> Bool? {
+        try? localFeedLoader.isProductSaved(productName) 
     }
 }

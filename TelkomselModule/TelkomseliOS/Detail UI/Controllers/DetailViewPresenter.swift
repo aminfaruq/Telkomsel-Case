@@ -12,7 +12,7 @@ public protocol DetailViewDelegate: NSObjectProtocol {
     func didShowItem(item: FeedItem)
     func didSaveProduct(item: FeedItem)
     func didDeleteProduct(productName: String)
-    func didShowProductByName(productName: String) -> Bool
+    func didShowProductByName(productName: String) -> Bool?
 }
 
 class DetailViewPresenter {
